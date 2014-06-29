@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2854B08317050996000B6086 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2854B08217050996000B6086 /* Cocoa.framework */; };
+		2854B08D17050996000B6086 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2854B08B17050996000B6086 /* InfoPlist.strings */; };
+		2854B08F17050996000B6086 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2854B08E17050996000B6086 /* main.m */; };
+		2854B09617050996000B6086 /* APLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2854B09517050996000B6086 /* APLDocument.m */; };
+		2854B09917050996000B6086 /* APLDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2854B09717050996000B6086 /* APLDocument.xib */; };
+		2854B09C17050996000B6086 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2854B09A17050996000B6086 /* MainMenu.xib */; };
+		287555C6170509E500C17F4C /* APLCoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287555C5170509E500C17F4C /* APLCoreTextArcView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2854B07F17050996000B6086 /* CoreTextArcCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTextArcCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2854B08217050996000B6086 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2854B08517050996000B6086 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2854B08617050996000B6086 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2854B08717050996000B6086 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2854B08A17050996000B6086 /* CoreTextArcCocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreTextArcCocoa-Info.plist"; sourceTree = "<group>"; };
+		2854B08C17050996000B6086 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2854B08E17050996000B6086 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2854B09017050996000B6086 /* CoreTextArcCocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreTextArcCocoa-Prefix.pch"; sourceTree = "<group>"; };
+		2854B09417050996000B6086 /* APLDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLDocument.h; sourceTree = "<group>"; };
+		2854B09517050996000B6086 /* APLDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLDocument.m; sourceTree = "<group>"; };
+		2854B09817050996000B6086 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/APLDocument.xib; sourceTree = "<group>"; };
+		2854B09B17050996000B6086 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		287555C4170509E500C17F4C /* APLCoreTextArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCoreTextArcView.h; sourceTree = "<group>"; };
+		287555C5170509E500C17F4C /* APLCoreTextArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCoreTextArcView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2854B07C17050996000B6086 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2854B08317050996000B6086 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2854B07617050996000B6086 = {
+			isa = PBXGroup;
+			children = (
+				2854B08817050996000B6086 /* CoreTextArcCocoa */,
+				2854B08117050996000B6086 /* Frameworks */,
+				2854B08017050996000B6086 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2854B08017050996000B6086 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2854B07F17050996000B6086 /* CoreTextArcCocoa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2854B08117050996000B6086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2854B08217050996000B6086 /* Cocoa.framework */,
+				2854B08417050996000B6086 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2854B08417050996000B6086 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2854B08517050996000B6086 /* AppKit.framework */,
+				2854B08617050996000B6086 /* CoreData.framework */,
+				2854B08717050996000B6086 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2854B08817050996000B6086 /* CoreTextArcCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				287555C4170509E500C17F4C /* APLCoreTextArcView.h */,
+				287555C5170509E500C17F4C /* APLCoreTextArcView.m */,
+				2854B09417050996000B6086 /* APLDocument.h */,
+				2854B09517050996000B6086 /* APLDocument.m */,
+				2854B09717050996000B6086 /* APLDocument.xib */,
+				2854B09A17050996000B6086 /* MainMenu.xib */,
+				2854B08917050996000B6086 /* Supporting Files */,
+			);
+			path = CoreTextArcCocoa;
+			sourceTree = "<group>";
+		};
+		2854B08917050996000B6086 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2854B08A17050996000B6086 /* CoreTextArcCocoa-Info.plist */,
+				2854B08B17050996000B6086 /* InfoPlist.strings */,
+				2854B08E17050996000B6086 /* main.m */,
+				2854B09017050996000B6086 /* CoreTextArcCocoa-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2854B07E17050996000B6086 /* CoreTextArcCocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2854B09F17050996000B6086 /* Build configuration list for PBXNativeTarget "CoreTextArcCocoa" */;
+			buildPhases = (
+				2854B07B17050996000B6086 /* Sources */,
+				2854B07C17050996000B6086 /* Frameworks */,
+				2854B07D17050996000B6086 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreTextArcCocoa;
+			productName = CoreTextArcCocoa;
+			productReference = 2854B07F17050996000B6086 /* CoreTextArcCocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2854B07717050996000B6086 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = APL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Apple, Inc.";
+			};
+			buildConfigurationList = 2854B07A17050996000B6086 /* Build configuration list for PBXProject "CoreTextArcCocoa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2854B07617050996000B6086;
+			productRefGroup = 2854B08017050996000B6086 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2854B07E17050996000B6086 /* CoreTextArcCocoa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2854B07D17050996000B6086 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2854B08D17050996000B6086 /* InfoPlist.strings in Resources */,
+				2854B09917050996000B6086 /* APLDocument.xib in Resources */,
+				2854B09C17050996000B6086 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2854B07B17050996000B6086 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2854B08F17050996000B6086 /* main.m in Sources */,
+				2854B09617050996000B6086 /* APLDocument.m in Sources */,
+				287555C6170509E500C17F4C /* APLCoreTextArcView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2854B08B17050996000B6086 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2854B08C17050996000B6086 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2854B09717050996000B6086 /* APLDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2854B09817050996000B6086 /* en */,
+			);
+			name = APLDocument.xib;
+			sourceTree = "<group>";
+		};
+		2854B09A17050996000B6086 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2854B09B17050996000B6086 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2854B09D17050996000B6086 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2854B09E17050996000B6086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2854B0A017050996000B6086 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreTextArcCocoa/CoreTextArcCocoa-Prefix.pch";
+				INFOPLIST_FILE = "CoreTextArcCocoa/CoreTextArcCocoa-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2854B0A117050996000B6086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreTextArcCocoa/CoreTextArcCocoa-Prefix.pch";
+				INFOPLIST_FILE = "CoreTextArcCocoa/CoreTextArcCocoa-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2854B07A17050996000B6086 /* Build configuration list for PBXProject "CoreTextArcCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2854B09D17050996000B6086 /* Debug */,
+				2854B09E17050996000B6086 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2854B09F17050996000B6086 /* Build configuration list for PBXNativeTarget "CoreTextArcCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2854B0A017050996000B6086 /* Debug */,
+				2854B0A117050996000B6086 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2854B07717050996000B6086 /* Project object */;
+}

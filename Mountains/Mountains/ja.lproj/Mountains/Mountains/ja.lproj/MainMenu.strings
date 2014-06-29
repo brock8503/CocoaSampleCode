@@ -1,0 +1,118 @@
+
+/* Class = "NSMenuItem"; title = "すべてを手前に移動"; ObjectID = "5"; */
+"5.title" = "すべてを手前に移動";
+
+/* Class = "NSMenuItem"; title = "ウインドウ"; ObjectID = "19"; */
+"19.title" = "ウインドウ";
+
+/* Class = "NSMenuItem"; title = "しまう"; ObjectID = "23"; */
+"23.title" = "しまう";
+
+/* Class = "NSMenu"; title = "ウインドウ"; ObjectID = "24"; */
+"24.title" = "ウインドウ";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "Mountains"; ObjectID = "56"; */
+"56.title" = "Mountains";
+
+/* Class = "NSMenu"; title = "Mountains"; ObjectID = "57"; */
+"57.title" = "Mountains";
+
+/* Class = "NSMenuItem"; title = "Mountainsについて"; ObjectID = "58"; */
+"58.title" = "Mountains について";
+
+/* Class = "NSMenuItem"; title = "閉じる"; ObjectID = "73"; */
+"73.title" = "閉じる";
+
+/* Class = "NSMenuItem"; title = "プリント..."; ObjectID = "78"; */
+"78.title" = "プリント...";
+
+/* Class = "NSMenu"; title = "ファイル"; ObjectID = "81"; */
+"81.title" = "ファイル";
+
+/* Class = "NSMenuItem"; title = "ファイル"; ObjectID = "83"; */
+"83.title" = "ファイル";
+
+/* Class = "NSMenuItem"; title = "ヘルプ"; ObjectID = "103"; */
+"103.title" = "ヘルプ";
+
+/* Class = "NSMenu"; title = "ヘルプ"; ObjectID = "106"; */
+"106.title" = "ヘルプ";
+
+/* Class = "NSMenuItem"; title = "Mountainsヘルプ"; ObjectID = "111"; */
+"111.title" = "Mountains ヘルプ";
+
+/* Class = "NSMenuItem"; title = "環境設定..."; ObjectID = "129"; */
+"129.title" = "環境設定...";
+
+/* Class = "NSMenu"; title = "サービス"; ObjectID = "130"; */
+"130.title" = "サービス";
+
+/* Class = "NSMenuItem"; title = "サービス"; ObjectID = "131"; */
+"131.title" = "サービス";
+
+/* Class = "NSMenuItem"; title = "Mountainsを隠す"; ObjectID = "134"; */
+"134.title" = "Mountains を隠す";
+
+/* Class = "NSMenuItem"; title = "Mountainsを終了"; ObjectID = "136"; */
+"136.title" = "Mountains を終了";
+
+/* Class = "NSMenuItem"; title = "ほかを隠す"; ObjectID = "145"; */
+"145.title" = "ほかを隠す";
+
+/* Class = "NSMenuItem"; title = "すべてを表示"; ObjectID = "150"; */
+"150.title" = "すべてを表示";
+
+/* Class = "NSMenuItem"; title = "コピー"; ObjectID = "197"; */
+"197.title" = "コピー";
+
+/* Class = "NSMenuItem"; title = "すべてを選択"; ObjectID = "198"; */
+"198.title" = "すべてを選択";
+
+/* Class = "NSMenuItem"; title = "カット"; ObjectID = "199"; */
+"199.title" = "カット";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "202"; */
+"202.title" = "削除";
+
+/* Class = "NSMenuItem"; title = "ペースト"; ObjectID = "203"; */
+"203.title" = "ペースト";
+
+/* Class = "NSMenu"; title = "編集"; ObjectID = "205"; */
+"205.title" = "編集";
+
+/* Class = "NSMenuItem"; title = "取り消す"; ObjectID = "207"; */
+"207.title" = "取り消す";
+
+/* Class = "NSMenuItem"; title = "やり直す"; ObjectID = "215"; */
+"215.title" = "やり直す";
+
+/* Class = "NSMenuItem"; title = "編集"; ObjectID = "217"; */
+"217.title" = "編集";
+
+/* Class = "NSMenuItem"; title = "拡大／縮小"; ObjectID = "239"; */
+"239.title" = "拡大／縮小";
+
+/* Class = "NSWindow"; title = "ウインドウ"; ObjectID = "371"; */
+"371.title" = "ウインドウ";
+
+/* Class = "NSTableColumn"; headerCell.title = "名前"; ObjectID = "392"; */
+"392.headerCell.title" = "名前";
+
+/* Class = "NSTableColumn"; headerCell.title = "高さ"; ObjectID = "393"; */
+"393.headerCell.title" = "高さ";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "394"; */
+"394.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "395"; */
+"395.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "日付は上った"; ObjectID = "396"; */
+"396.headerCell.title" = "登頂日";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "397"; */
+"397.title" = "Text Cell";
+

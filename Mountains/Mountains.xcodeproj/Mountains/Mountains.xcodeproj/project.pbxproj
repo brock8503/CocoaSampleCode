@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28026F4216B09AEF006A72B5 /* Mountains.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28026F4016B09AEF006A72B5 /* Mountains.strings */; };
+		28026F4916B09B1B006A72B5 /* Mountains.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28026F4716B09B1B006A72B5 /* Mountains.plist */; };
+		28856473167689090044D819 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28856472167689090044D819 /* Cocoa.framework */; };
+		2885647D167689090044D819 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2885647B167689090044D819 /* InfoPlist.strings */; };
+		2885647F167689090044D819 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2885647E167689090044D819 /* main.m */; };
+		28856486167689090044D819 /* APLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28856485167689090044D819 /* APLAppDelegate.m */; };
+		28856489167689090044D819 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28856487167689090044D819 /* MainMenu.xib */; };
+		2885649116768AE40044D819 /* APLMountain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2885649016768AE40044D819 /* APLMountain.m */; };
+		288564AB167699890044D819 /* Mountains.icns in Resources */ = {isa = PBXBuildFile; fileRef = 288564AA167699890044D819 /* Mountains.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28026F4116B09AEF006A72B5 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Mountains.strings; sourceTree = "<group>"; };
+		28026F4316B09AF5006A72B5 /* zh-Hant */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Mountains.strings"; sourceTree = "<group>"; };
+		28026F4416B09AF8006A72B5 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Mountains.strings; sourceTree = "<group>"; };
+		28026F4516B09AFA006A72B5 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Mountains.strings; sourceTree = "<group>"; };
+		28026F4616B09AFE006A72B5 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Mountains.strings; sourceTree = "<group>"; };
+		28026F4816B09B1B006A72B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Mountains.plist; sourceTree = "<group>"; };
+		28026F4A16B09B21006A72B5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/Mountains.plist; sourceTree = "<group>"; };
+		28026F4B16B09B23006A72B5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ja; path = ja.lproj/Mountains.plist; sourceTree = "<group>"; };
+		28026F4C16B09B25006A72B5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ru; path = ru.lproj/Mountains.plist; sourceTree = "<group>"; };
+		28026F4D16B09B28006A72B5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/Mountains.plist"; sourceTree = "<group>"; };
+		2885646F167689090044D819 /* Mountains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mountains.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28856472167689090044D819 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		28856475167689090044D819 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		28856476167689090044D819 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		28856477167689090044D819 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2885647A167689090044D819 /* Mountains-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Mountains-Info.plist"; sourceTree = "<group>"; };
+		2885647C167689090044D819 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2885647E167689090044D819 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28856480167689090044D819 /* Mountains-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mountains-Prefix.pch"; sourceTree = "<group>"; };
+		28856484167689090044D819 /* APLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APLAppDelegate.h; sourceTree = "<group>"; };
+		28856485167689090044D819 /* APLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APLAppDelegate.m; sourceTree = "<group>"; };
+		2885648F16768AE40044D819 /* APLMountain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLMountain.h; sourceTree = "<group>"; };
+		2885649016768AE40044D819 /* APLMountain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLMountain.m; sourceTree = "<group>"; };
+		28856492167690E60044D819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		288564A3167697B10044D819 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		288564A4167697B40044D819 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		288564A5167697B80044D819 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		288564A6167697BA0044D819 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		288564A91676996D0044D819 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		288564AA167699890044D819 /* Mountains.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Mountains.icns; sourceTree = "<group>"; };
+		28DF7BB41677C41300D8028E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		28DF7BB61677C41600D8028E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		28DF7BB81677C41900D8028E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		28DF7BBA1677C41B00D8028E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		28DF7BBC1677C42000D8028E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2885646C167689090044D819 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28856473167689090044D819 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28856466167689090044D819 = {
+			isa = PBXGroup;
+			children = (
+				288564A91676996D0044D819 /* README.txt */,
+				28856478167689090044D819 /* Mountains */,
+				28856471167689090044D819 /* Frameworks */,
+				28856470167689090044D819 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28856470167689090044D819 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2885646F167689090044D819 /* Mountains.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28856471167689090044D819 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28856472167689090044D819 /* Cocoa.framework */,
+				28856474167689090044D819 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28856474167689090044D819 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28856475167689090044D819 /* AppKit.framework */,
+				28856476167689090044D819 /* CoreData.framework */,
+				28856477167689090044D819 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		28856478167689090044D819 /* Mountains */ = {
+			isa = PBXGroup;
+			children = (
+				28856484167689090044D819 /* APLAppDelegate.h */,
+				28856485167689090044D819 /* APLAppDelegate.m */,
+				2885648F16768AE40044D819 /* APLMountain.h */,
+				2885649016768AE40044D819 /* APLMountain.m */,
+				28856487167689090044D819 /* MainMenu.xib */,
+				28026F4016B09AEF006A72B5 /* Mountains.strings */,
+				28026F4716B09B1B006A72B5 /* Mountains.plist */,
+				28856479167689090044D819 /* Supporting Files */,
+			);
+			path = Mountains;
+			sourceTree = "<group>";
+		};
+		28856479167689090044D819 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				288564AA167699890044D819 /* Mountains.icns */,
+				2885647A167689090044D819 /* Mountains-Info.plist */,
+				2885647B167689090044D819 /* InfoPlist.strings */,
+				2885647E167689090044D819 /* main.m */,
+				28856480167689090044D819 /* Mountains-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2885646E167689090044D819 /* Mountains */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2885648C167689090044D819 /* Build configuration list for PBXNativeTarget "Mountains" */;
+			buildPhases = (
+				2885646B167689090044D819 /* Sources */,
+				2885646C167689090044D819 /* Frameworks */,
+				2885646D167689090044D819 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mountains;
+			productName = Mountains;
+			productReference = 2885646F167689090044D819 /* Mountains.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28856467167689090044D819 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = APL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = 2885646A167689090044D819 /* Build configuration list for PBXProject "Mountains" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"en-Dsrt",
+				fr,
+				ja,
+				ru,
+				zh_TW,
+				"zh-Hant",
+			);
+			mainGroup = 28856466167689090044D819;
+			productRefGroup = 28856470167689090044D819 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2885646E167689090044D819 /* Mountains */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2885646D167689090044D819 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2885647D167689090044D819 /* InfoPlist.strings in Resources */,
+				28856489167689090044D819 /* MainMenu.xib in Resources */,
+				288564AB167699890044D819 /* Mountains.icns in Resources */,
+				28026F4216B09AEF006A72B5 /* Mountains.strings in Resources */,
+				28026F4916B09B1B006A72B5 /* Mountains.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2885646B167689090044D819 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2885647F167689090044D819 /* main.m in Sources */,
+				28856486167689090044D819 /* APLAppDelegate.m in Sources */,
+				2885649116768AE40044D819 /* APLMountain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28026F4016B09AEF006A72B5 /* Mountains.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28026F4116B09AEF006A72B5 /* en */,
+				28026F4316B09AF5006A72B5 /* zh-Hant */,
+				28026F4416B09AF8006A72B5 /* ru */,
+				28026F4516B09AFA006A72B5 /* ja */,
+				28026F4616B09AFE006A72B5 /* fr */,
+			);
+			name = Mountains.strings;
+			sourceTree = "<group>";
+		};
+		28026F4716B09B1B006A72B5 /* Mountains.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28026F4816B09B1B006A72B5 /* en */,
+				28026F4A16B09B21006A72B5 /* fr */,
+				28026F4B16B09B23006A72B5 /* ja */,
+				28026F4C16B09B25006A72B5 /* ru */,
+				28026F4D16B09B28006A72B5 /* zh-Hant */,
+			);
+			name = Mountains.plist;
+			sourceTree = "<group>";
+		};
+		2885647B167689090044D819 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2885647C167689090044D819 /* en */,
+				288564A3167697B10044D819 /* fr */,
+				288564A4167697B40044D819 /* ja */,
+				288564A5167697B80044D819 /* ru */,
+				288564A6167697BA0044D819 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		28856487167689090044D819 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28856492167690E60044D819 /* Base */,
+				28DF7BB41677C41300D8028E /* fr */,
+				28DF7BB61677C41600D8028E /* ja */,
+				28DF7BB81677C41900D8028E /* ru */,
+				28DF7BBA1677C41B00D8028E /* zh-Hant */,
+				28DF7BBC1677C42000D8028E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2885648A167689090044D819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2885648B167689090044D819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2885648D167689090044D819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mountains/Mountains-Prefix.pch";
+				INFOPLIST_FILE = "Mountains/Mountains-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2885648E167689090044D819 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mountains/Mountains-Prefix.pch";
+				INFOPLIST_FILE = "Mountains/Mountains-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2885646A167689090044D819 /* Build configuration list for PBXProject "Mountains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2885648A167689090044D819 /* Debug */,
+				2885648B167689090044D819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2885648C167689090044D819 /* Build configuration list for PBXNativeTarget "Mountains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2885648D167689090044D819 /* Debug */,
+				2885648E167689090044D819 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28856467167689090044D819 /* Project object */;
+}

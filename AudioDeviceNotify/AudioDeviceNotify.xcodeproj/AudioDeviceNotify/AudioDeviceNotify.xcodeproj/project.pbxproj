@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AFED5B309EC3BDD00A4681C /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFED5B209EC3BDD00A4681C /* AppController.m */; };
+		0AFED5CF09EC3CA300A4681C /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFED5CE09EC3CA300A4681C /* CoreAudio.framework */; };
+		2B0284BD165316E30020AFE0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0284BB165316E30020AFE0 /* MainMenu.xib */; };
+		2B0284BE165316E30020AFE0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0284BB165316E30020AFE0 /* MainMenu.xib */; };
+		2B92287F1651BDC0008B4F87 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFED5CE09EC3CA300A4681C /* CoreAudio.framework */; };
+		2B9228811651BDF2008B4F87 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		2B9228821651BE10008B4F87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		2B9228831651BE16008B4F87 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D64C1651BB380060042A /* AppController.mm */; };
+		2B9228841651BE22008B4F87 /* CAHALAudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D6541651BB590060042A /* CAHALAudioDevice.cpp */; };
+		2B9228851651BE22008B4F87 /* CAHALAudioObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D6561651BB590060042A /* CAHALAudioObject.cpp */; };
+		2B9228861651BE22008B4F87 /* CAHALAudioStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D6581651BB590060042A /* CAHALAudioStream.cpp */; };
+		2B9228871651BE22008B4F87 /* CAHALAudioSystemObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D65A1651BB590060042A /* CAHALAudioSystemObject.cpp */; };
+		2B9228881651BE32008B4F87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		2B92288C1651C017008B4F87 /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B92288A1651C017008B4F87 /* CADebugPrintf.cpp */; };
+		2B92288D1651C036008B4F87 /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B66D6501651BB590060042A /* CACFString.cpp */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AFED5B109EC3BDD00A4681C /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		0AFED5B209EC3BDD00A4681C /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		0AFED5CE09EC3CA300A4681C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2B0284BC165316E30020AFE0 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2B66D64C1651BB380060042A /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
+		2B66D6501651BB590060042A /* CACFString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CACFString.cpp; path = PublicUtility/CACFString.cpp; sourceTree = "<group>"; };
+		2B66D6511651BB590060042A /* CACFString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CACFString.h; path = PublicUtility/CACFString.h; sourceTree = "<group>"; };
+		2B66D6541651BB590060042A /* CAHALAudioDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioDevice.cpp; path = PublicUtility/CAHALAudioDevice.cpp; sourceTree = "<group>"; };
+		2B66D6551651BB590060042A /* CAHALAudioDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAHALAudioDevice.h; path = PublicUtility/CAHALAudioDevice.h; sourceTree = "<group>"; };
+		2B66D6561651BB590060042A /* CAHALAudioObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioObject.cpp; path = PublicUtility/CAHALAudioObject.cpp; sourceTree = "<group>"; };
+		2B66D6571651BB590060042A /* CAHALAudioObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAHALAudioObject.h; path = PublicUtility/CAHALAudioObject.h; sourceTree = "<group>"; };
+		2B66D6581651BB590060042A /* CAHALAudioStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioStream.cpp; path = PublicUtility/CAHALAudioStream.cpp; sourceTree = "<group>"; };
+		2B66D6591651BB590060042A /* CAHALAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAHALAudioStream.h; path = PublicUtility/CAHALAudioStream.h; sourceTree = "<group>"; };
+		2B66D65A1651BB590060042A /* CAHALAudioSystemObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioSystemObject.cpp; path = PublicUtility/CAHALAudioSystemObject.cpp; sourceTree = "<group>"; };
+		2B66D65B1651BB590060042A /* CAHALAudioSystemObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAHALAudioSystemObject.h; path = PublicUtility/CAHALAudioSystemObject.h; sourceTree = "<group>"; };
+		2B66D65C1651BB590060042A /* CAPropertyAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAPropertyAddress.h; path = PublicUtility/CAPropertyAddress.h; sourceTree = "<group>"; };
+		2B7383F71651E79700B3A349 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		2B9228621651BD82008B4F87 /* AudioDeviceNotify2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDeviceNotify2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B92288A1651C017008B4F87 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CADebugPrintf.cpp; path = PublicUtility/CADebugPrintf.cpp; sourceTree = "<group>"; };
+		2B92288B1651C017008B4F87 /* CADebugPrintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADebugPrintf.h; path = PublicUtility/CADebugPrintf.h; sourceTree = "<group>"; };
+		2BB77C031651C15A0093CCC2 /* AudioDeviceNotify2_Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AudioDeviceNotify2_Info.plist; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* AudioDeviceNotify_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceNotify_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* AudioDeviceNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDeviceNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B92285F1651BD82008B4F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9228811651BDF2008B4F87 /* Cocoa.framework in Frameworks */,
+				2B92287F1651BDC0008B4F87 /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0AFED5CF09EC3CA300A4681C /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AFED5CE09EC3CA300A4681C /* CoreAudio.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* AudioDeviceNotify.app */,
+				2B9228621651BD82008B4F87 /* AudioDeviceNotify2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AudioDeviceNotify */ = {
+			isa = PBXGroup;
+			children = (
+				2B7383F71651E79700B3A349 /* ReadMe.txt */,
+				32CA4F630368D1EE00C91783 /* AudioDeviceNotify_Prefix.pch */,
+				0AFED5B109EC3BDD00A4681C /* AppController.h */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				29B97315FDCFA39411CA2CEA /* App Source */,
+				2B7383F51651D4F500B3A349 /* App Source using Public Utility */,
+				2B66D64E1651BB440060042A /* Public Utility */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AudioDeviceNotify;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* App Source */ = {
+			isa = PBXGroup;
+			children = (
+				0AFED5B209EC3BDD00A4681C /* AppController.m */,
+			);
+			name = "App Source";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				2BB77C031651C15A0093CCC2 /* AudioDeviceNotify2_Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				2B0284BB165316E30020AFE0 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B66D64E1651BB440060042A /* Public Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2B66D65C1651BB590060042A /* CAPropertyAddress.h */,
+				2B66D6541651BB590060042A /* CAHALAudioDevice.cpp */,
+				2B66D6551651BB590060042A /* CAHALAudioDevice.h */,
+				2B66D6561651BB590060042A /* CAHALAudioObject.cpp */,
+				2B66D6571651BB590060042A /* CAHALAudioObject.h */,
+				2B66D6581651BB590060042A /* CAHALAudioStream.cpp */,
+				2B66D6591651BB590060042A /* CAHALAudioStream.h */,
+				2B66D65A1651BB590060042A /* CAHALAudioSystemObject.cpp */,
+				2B66D65B1651BB590060042A /* CAHALAudioSystemObject.h */,
+				2B92288A1651C017008B4F87 /* CADebugPrintf.cpp */,
+				2B92288B1651C017008B4F87 /* CADebugPrintf.h */,
+				2B66D6501651BB590060042A /* CACFString.cpp */,
+				2B66D6511651BB590060042A /* CACFString.h */,
+			);
+			name = "Public Utility";
+			sourceTree = "<group>";
+		};
+		2B7383F51651D4F500B3A349 /* App Source using Public Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2B66D64C1651BB380060042A /* AppController.mm */,
+			);
+			name = "App Source using Public Utility";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B9228611651BD82008B4F87 /* AudioDeviceNotify2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B92287B1651BD83008B4F87 /* Build configuration list for PBXNativeTarget "AudioDeviceNotify2" */;
+			buildPhases = (
+				2B92285E1651BD82008B4F87 /* Sources */,
+				2B92285F1651BD82008B4F87 /* Frameworks */,
+				2B9228601651BD82008B4F87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioDeviceNotify2;
+			productName = AudioDeviceNotify2;
+			productReference = 2B9228621651BD82008B4F87 /* AudioDeviceNotify2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D1107260486CEB800E47090 /* AudioDeviceNotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AFED58A09EC2B5800A4681C /* Build configuration list for PBXNativeTarget "AudioDeviceNotify" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioDeviceNotify;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AudioDeviceNotify;
+			productReference = 8D1107320486CEB800E47090 /* AudioDeviceNotify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 0AFED58E09EC2B5800A4681C /* Build configuration list for PBXProject "AudioDeviceNotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AudioDeviceNotify */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AudioDeviceNotify */,
+				2B9228611651BD82008B4F87 /* AudioDeviceNotify2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B9228601651BD82008B4F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9228881651BE32008B4F87 /* InfoPlist.strings in Resources */,
+				2B0284BE165316E30020AFE0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2B0284BD165316E30020AFE0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B92285E1651BD82008B4F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9228821651BE10008B4F87 /* main.m in Sources */,
+				2B9228831651BE16008B4F87 /* AppController.mm in Sources */,
+				2B9228841651BE22008B4F87 /* CAHALAudioDevice.cpp in Sources */,
+				2B9228851651BE22008B4F87 /* CAHALAudioObject.cpp in Sources */,
+				2B9228861651BE22008B4F87 /* CAHALAudioStream.cpp in Sources */,
+				2B9228871651BE22008B4F87 /* CAHALAudioSystemObject.cpp in Sources */,
+				2B92288C1651C017008B4F87 /* CADebugPrintf.cpp in Sources */,
+				2B92288D1651C036008B4F87 /* CACFString.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				0AFED5B309EC3BDD00A4681C /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2B0284BB165316E30020AFE0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B0284BC165316E30020AFE0 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AFED58B09EC2B5800A4681C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioDeviceNotify_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = AudioDeviceNotify;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0AFED58C09EC2B5800A4681C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioDeviceNotify_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = AudioDeviceNotify;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0AFED58D09EC2B5800A4681C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioDeviceNotify_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = AudioDeviceNotify;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		0AFED58F09EC2B5800A4681C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bind_at_load";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0AFED59009EC2B5800A4681C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bind_at_load";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0AFED59109EC2B5800A4681C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-bind_at_load";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Default;
+		};
+		2B9228781651BD83008B4F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioDeviceNotify_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = AudioDeviceNotify2_Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2B9228791651BD83008B4F87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioDeviceNotify_Prefix.pch;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = AudioDeviceNotify2_Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2B92287A1651BD83008B4F87 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioDeviceNotify_Prefix.pch;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = AudioDeviceNotify2_Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AFED58A09EC2B5800A4681C /* Build configuration list for PBXNativeTarget "AudioDeviceNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFED58B09EC2B5800A4681C /* Debug */,
+				0AFED58C09EC2B5800A4681C /* Release */,
+				0AFED58D09EC2B5800A4681C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		0AFED58E09EC2B5800A4681C /* Build configuration list for PBXProject "AudioDeviceNotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AFED58F09EC2B5800A4681C /* Debug */,
+				0AFED59009EC2B5800A4681C /* Release */,
+				0AFED59109EC2B5800A4681C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		2B92287B1651BD83008B4F87 /* Build configuration list for PBXNativeTarget "AudioDeviceNotify2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9228781651BD83008B4F87 /* Debug */,
+				2B9228791651BD83008B4F87 /* Release */,
+				2B92287A1651BD83008B4F87 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

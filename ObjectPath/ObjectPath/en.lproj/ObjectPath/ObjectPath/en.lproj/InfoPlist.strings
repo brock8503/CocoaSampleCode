@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+CFBunldeGetInfoString = "v2.2, Copyright © 2013 Apple Inc. All rights reserved.";
+NSHumanReadableCopyright = "Copyright © 2013 Apple Inc. All rights reserved.";

@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  BoundButton
+*/
+
+// Entrees,
+"Pizza" = "Pizza";
+"Calzone" = "Calzone";
+
+// Toppings.
+"Tomato" = "Tomato";
+"Cheese" = "Cheese";
+"Pepperoni" = "Pepperoni";
+"Sausage" = "Sausage";
+
+// Messages.
+"No Entree Selected" = "No entree selected.\n\n";
+"Plain Order Summary Format" = "Plain %@\nCost: %@\n\n";
+"Order Summary Format" = "%@ with %@\nCost: %@\n\n";
+"Toppings Separator" = ", ";

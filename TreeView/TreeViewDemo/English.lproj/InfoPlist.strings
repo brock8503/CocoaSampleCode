@@ -1,3 +1,0 @@
-/* Localized versions of Info.plist keys */
-CFBundleGetInfoString = "v1.3 Copyright © 2010-2012, Apple Inc.";
-NSHumanReadableCopyright = "Copyright © 2010-2012, Apple Inc.";

@@ -1,0 +1,335 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;\red255\green4\blue77;\red255\green107\blue1;\red16\green37\blue255;
+\red150\green150\blue2;\red150\green122\blue8;\red67\green5\blue159;\red204\green3\blue62;\red10\green129\blue159;
+\red116\green1\blue159;}
+\margl1440\margr1440\vieww22080\viewh18680\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs24 \cf0 {{\NeXTGraphic PlasmaExhibitsApp.pdf \width2560 \height2560
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\b \cf0 From A View to A Movie
+\b0  (a.k.a. Plasma Exhibits II)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+12/14/2012\
+\
+
+\b Description:
+\b0 \
+\
+\pard\pardeftab720
+\cf0 This application extends the sample "From A View to A picture", and further demonstrates hardware accelerated capture, HD color correction, and movie authoring pipeline from a view.  Again, the contents are 3D animated objects generated using OpenGL The individual frames during a capture session are written into a framebuffer object.  From there, starting with median white-point and color primaries provided by ColorSync for a display profile, linear transformations are computed, HD color correction is applied using a shader, and the results are captured as frames from an offscreen framebuffer using pixel buffer objects. Finally, the frames are written into a movie using QuickTime media authoring interfaces.\
+\
+
+\b View Capture:
+\b0 \
+\
+The view capture pipeline authors uncompressed BGRA frames. As a result, for large view captures one should expect a large movie files and high data rates.\
+\
+
+\b ColorSync:
+\b0 \
+\
+To perform Rec. 709 color correction, one needs to form linear transformation matrices that will map non-linear RGB colors into the abstract CIE XYZ space and back, along with chromatic adaptation matrices in Cone Response Domain for mapping to D65 source white-point.  To form these linear transformations, one needs to start with RGB color primaries for linear transformations to and from CIE XYZ space, as well as a starting media white-point for chromatic adaptation matrices.  On Mac OS X the starting point is ColorSync.\
+\
+As an example, to extract media white-point using Leopard family of Color Manager application programming interfaces, one would proceed with:\
+\
+
+\f1 	\cf2 float\cf0  aSrcWhitePoint[3];\
+\
+	\cf3 CMProfileRef\cf0  pProfile;\
+\
+	\cf3 CMError\cf0  nError = \cf4 CMGetProfileElement\cf0 (pProfile, \cf5 cmMediaWhitePointTag\cf0 , &nWhitePointDataSize, \cf6 NULL\cf0 );\
+	\
+	if( nError == \cf6 noErr\cf0  )\
+	\{\
+		\cf3 CMXYZType\cf0  *pWhitePoint = (\cf3 CMXYZType\cf0  *)\cf7 malloc\cf0 (nWhitePointDataSize);\
+		\
+		if( pWhitePoint != \cf6 NULL\cf0  )\
+		\{\
+			err = \cf4 CMGetProfileElement\cf0 (pProfile, \cf5 cmMediaWhitePointTag\cf0 , &nWhitePointDataSize, pWhitePoint);\
+			\
+			\cf8 bool\cf0  isValid = ( err == \cf6 noErr\cf0  ) && ( \cf4 EndianU32_BtoN\cf0 (pWhitePoint->\cf9 typeDescriptor\cf0  ) == \cf5 cmSigXYZType\cf0  );\
+			\
+			if( isValid )\
+			\{\
+				\cf3 CMFixedXYZColor\cf0  aFixedWhitePoint = pWhitePoint->\cf9 XYZ[0]\cf0 ;\
+				\
+				aSrcWhitePoint[0] = \cf10 Fixed2Float\cf0 (\cf4 EndianU32_BtoN\cf0 (aFixedWhitePoint.\cf9 X\cf0 ));\
+				aSrcWhitePoint[1] = \cf10 Fixed2Float\cf0 (\cf4 EndianU32_BtoN\cf0 (aFixedWhitePoint.\cf9 Y\cf0 ));\
+				aSrcWhitePoint[2] = \cf10 Fixed2Float\cf0 (\cf4 EndianU32_BtoN\cf0 (aFixedWhitePoint.\cf9 Z\cf0 ));\
+			\} // if\
+			\
+			\cf7 free\cf0 ( pWhitePoint );\
+		\} // if\
+	\} // if\
+
+\f0 \
+However, starting in Snow Leopard, to extract the same media white-point, one needs to use the modern ColorSync family of application programming interfaces, and hence:\
+\
+
+\f1 	\cf8 float\cf0  aSrcWhitePoint[3];\
+\
+	\cf3 ColorSyncProfileRef\cf0  pProfile;\
+\
+	\cf3 CFDataRef\cf0  pTagData = \cf4 ColorSyncProfileCopyTag\cf0 (pProfile, \cf4 CFSTR\cf0 ("\cf5 wtpt\cf0 "));\
+	\
+	if( pTagData != \cf6 NULL\cf0  )\
+	\{\
+		const \cf8 uint8_t\cf0  *pTagBytes= \cf4 CFDataGetBytePtr\cf0 ( pTagData );\
+		\
+		if( pTagBytes != \cf6 NULL\cf0  )\
+		\{\
+			\cf3 icXYZType\cf0  aXYZTag = *(\cf3 icXYZType\cf0 *)pTagBytes;\
+			\
+			\cf3 FourCharCode\cf0  aTagType = \cf4 CFSwapInt32BigToHost\cf0 ( aXYZTag.\cf9 base\cf0 .\cf9 sig\cf0  );\
+			\
+			if( aTagType == \cf5 icSigXYZType\cf0  )\
+			\{\
+				aSrcWhitePoint[0] = \cf10 Fixed2Float\cf0 (\cf4 CFSwapInt32BigToHost\cf0 (aXYZTag.\cf9 data\cf0 .\cf9 data[0]\cf0 .\cf9 X\cf0 ));\
+				aSrcWhitePoint[1] = \cf10 Fixed2Float\cf0 (\cf4 CFSwapInt32BigToHost\cf0 (aXYZTag.\cf9 data\cf0 .\cf9 data[0]\cf0 .\cf9 Y\cf0 ));\
+				aSrcWhitePoint[2] = \cf10 Fixed2Float\cf0 (\cf4 CFSwapInt32BigToHost\cf0 (aXYZTag.\cf9 data\cf0 .\cf9 data[0]\cf0 .\cf9 Z\cf0 ));\
+			\} // if\
+		\} // if\
+		\
+		\cf4 CFRelease\cf0 ( pTagData );\
+	\} // if\
+
+\f0 \
+Note that in Snow Leopard, the results are returned as 
+\f1 CFDataRef
+\f0  opaque data structure.  To extract the desired set of values, one must cast this opaque reference to an ICC structure using the ICC international standards and published ICC 3.4 profile header file. This ICC header file is shipped with Snow Leopard.  Furthermore, the header files can be obtained from the ICC web site at  
+\f1 http://www.color.org/profileheader.xalter
+\f0 .\
+\
+Also note that in both Leopard and Snow Leopard implementations, the CIE XYZ tristimulus values are returned as fixed numbers.  To convert these numbers to floating point numbers, suitable for matrix computations and linear transformations, one may use a function such as:\
+\
+
+\f1 	\cf8 float\cf0  \cf10 Fixed2Float\cf0 ( const \cf8 uint32_t\cf0  nFixedNum )\
+	\{\
+		return( nFixedNum / (\cf8 uint32_t\cf0 )\cf6 0x00010000L\cf0  );\
+	\} \
+
+\f0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Class Groups:
+\b0 \
+\
+This application includes many reusable utility classes implementing and abstracting various application programming interface workflows.  The application uses MVC design pattern and as such utility classes, or class groups, are organized in the Xcode project with the following hierarchy:\
+\
+
+\f2 \uc0\u9658 
+\f0 	Model\
+	
+\f3 \'81\'9d
+\f0 	Colors\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class to extract median white-point and RGB colorants from a ColorSync profile\
+		
+\f3 \uc0\u9673 
+\f0 	Utility classes to compute chromatic adaptation matrices starting from Bradford matrices\
+		
+\f3 \uc0\u9673 
+\f0 	Utility classes to compute linear transformations for mapping to and from CIE XYZ space staring with a ColorSync profile\
+	
+\f3 \'81\'9d
+\f0 	Files\
+		
+\f3 \uc0\u9673 
+\f0 	Preferences\
+			
+\f3 \uc0\u10687 
+\f0 	Mediator class that manages application's property list\
+			
+\f3 \uc0\u10687 
+\f0 	Mediator utility class for managing property list(s)\
+	
+\f3 \'81\'9d
+\f0 	Image\
+		
+\f3 \uc0\u9673 
+\f0 	Utility functions for converting pixels (or bitmaps) to CG opaque image references\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class for loading image arrays from application's bundle\
+	
+\f3 \'81\'9d
+\f0 	Math\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class for matrix operations\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class for working with quaternions\
+		
+\f3 \uc0\u9673 
+\f0 	Utility classes for working with Euclidean vectors\
+	
+\f3 \'81\'9d
+\f0 	OpenGL\
+		
+\f3 \uc0\u9673 
+\f0 	Exhibits\
+			
+\f3 \uc0\u10687 
+\f0 	Displaying and managing various 3D geometrical objects\
+			
+\f3 \uc0\u10687 
+\f0 	Management of their Plasma shader\
+			
+\f3 \uc0\u10687 
+\f0 	Management of palette and pattern textures\
+			
+\f3 \uc0\u10687 
+\f0 	Mediator for interacting with the UI\
+		
+\f3 \uc0\u9673 
+\f0 	FBO\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes for framebuffer object management and readback\
+		
+\f3 \uc0\u9673 
+\f0 	Filters\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class that encapsulated HD color correction shader for Rec 709 space\
+		
+\f3 \uc0\u9673 
+\f0 	Object\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for timer based animation\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for managing of objects physical motion properties\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for trackball paradigm interaction with 3D object\
+		
+\f3 \uc0\u9673 
+\f0 	PBO\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for PBO asynchronous read pixel operation\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for PBO asynchronous texture updates\
+		
+\f3 \uc0\u9673 
+\f0 	Pixels\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for acquiring a valid pixel format from a set of desired attributes\
+		
+\f3 \uc0\u9673 
+\f0 	Quad\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for instantiating a VBO based quad\
+		
+\f3 \uc0\u9673 
+\f0 	Query\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for querying the GPU for its hardware attributes\
+		
+\f3 \uc0\u9673 
+\f0 	Shaders\
+			
+\f3 \uc0\u10687 
+\f0 	Compiles, links, and acquires a program object from a fragment and vertex source\
+			
+\f3 \uc0\u10687 
+\f0 	Manages assets such as uniforms and textures associated with a shader\
+			
+\f3 \uc0\u10687 
+\f0 	Executes a shader along with its assets\
+		
+\f3 \uc0\u9673 
+\f0 	Surfaces\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes to build and then instantiate various forms of exotic 3D objects\
+		
+\f3 \uc0\u9673 
+\f0 	Text\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes to convert system fonts to textures for use with OpenGL\
+		
+\f3 \uc0\u9673 
+\f0 	Texture\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes for managing standard 1D, 2D, 3D textures as well as shared and cached textures\
+			
+\f3 \uc0\u10687 
+\f0 	A mediator class for managing various forms of textures including textures bound to a PBO\
+		
+\f3 \uc0\u9673 
+\f0 	View\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes for taking a snapshot from a view and saving the results as tiff, pdf, bmp, png, pict, gif, jpeg, jp2.\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes for capturing frames from a view and authoring a QuickTime movie\
+	
+\f3 \'81\'9d
+\f0 	QuickTime\
+		
+\f3 \uc0\u9673 
+\f0 	Utility classes for authoring QuickTime movies starting with individual media samples\
+	
+\f3 \'81\'9d
+\f0 	Utilities\
+		
+\f3 \uc0\u9673 
+\f0 	View animation class for fade in/out of panels and level indicators\
+		
+\f3 \uc0\u9673 
+\f0 	A utility function for logging Core Foundation style errors\
+		
+\f3 \uc0\u9673 
+\f0 	A utility class for generating a standard path name for saving images\
+		
+\f3 \uc0\u9673 
+\f0 	A utility class that abstracts pixels (bitmaps) for use as media samples and QuickTime authoring utility classes\
+		
+\f3 \uc0\u9673 
+\f0 	A utility class that implements a Mach based performance timer\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 \uc0\u9658 
+\f0 	View\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	
+\f3 \'81\'9d
+\f0 	Utility classes for implementing a customized animating OpenGL view that allows limited interaction with 3D objects.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 \uc0\u9658 
+\f0 	Controller\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	
+\f3 \'81\'9d
+\f0 	Controller class to handle preferences UI interaction with property list\
+	
+\f3 \'81\'9d
+\f0 	Controller class to handle UI interaction with filters, shaders, and property list\
+\
+
+\b Class Hierarchy:
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 {{\NeXTGraphic From View to a Movie.jpg \width30400 \height31540
+}¬}\
+}

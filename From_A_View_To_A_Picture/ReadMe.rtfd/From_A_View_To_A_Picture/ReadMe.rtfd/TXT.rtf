@@ -1,0 +1,217 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww22080\viewh18680\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs24 \cf0 {{\NeXTGraphic PlasmaExhibitsApp.pdf \width2560 \height2560
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\b \cf0 From A View to A Picture
+\b0  (a.k.a. Plasma Exhibits II)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+12/17/2012\
+\
+
+\b Description:
+\b0 \
+\
+This application demonstrates hardware accelerated view capture pipeline from a view and saving the results as files using Image I/O.  The contents are 3D animated objects generated using OpenGL, and captured as a snapshot using pixel buffer objects.  The images can then be saved as 
+\f1 tiff
+\f0 , 
+\f1 pdf
+\f0 , 
+\f1 bmp
+\f0 , 
+\f1 pict
+\f0 , 
+\f1 png
+\f0 , 
+\f1 gif
+\f0 , 
+\f1 jpeg
+\f0 , or 
+\f1 jp2
+\f0  files using Image I/O.  The application also manages and stores properties of OpenGL shader uniforms and image file authoring preferences.\
+\pard\pardeftab720
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Class Groups:
+\b0 \
+\
+This application includes many reusable utility classes implementing and abstracting various application programming interface workflows.  The application uses MVC design pattern and as such utility classes, or class groups, are organized in the Xcode project with the following hierarchy:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f2 \cf0 \uc0\u9658 
+\f0 	Model\
+	
+\f3 \'81\'9d
+\f0 	Files\
+		
+\f3 \uc0\u9673 
+\f0 	Preferences\
+			
+\f3 \uc0\u10687 
+\f0 	Mediator class that manages application's property list\
+			
+\f3 \uc0\u10687 
+\f0 	Mediator utility class for managing property list(s)\
+	
+\f3 \'81\'9d
+\f0 	Image\
+		
+\f3 \uc0\u9673 
+\f0 	Utility functions for converting pixels (or bitmaps) to CG opaque image references\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class for loading image arrays from application's bundle\
+	
+\f3 \'81\'9d
+\f0 	Math\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class for matrix operations\
+		
+\f3 \uc0\u9673 
+\f0 	Utility class for working with quaternions\
+		
+\f3 \uc0\u9673 
+\f0 	Utility classes for working with Euclidean vectors\
+	
+\f3 \'81\'9d
+\f0 	OpenGL\
+		
+\f3 \uc0\u9673 
+\f0 	Exhibits\
+			
+\f3 \uc0\u10687 
+\f0 	Displaying and managing various 3D geometrical objects\
+			
+\f3 \uc0\u10687 
+\f0 	Management of their Plasma shader\
+			
+\f3 \uc0\u10687 
+\f0 	Management of palette and pattern textures\
+			
+\f3 \uc0\u10687 
+\f0 	Mediator for interacting with the UI\
+		
+\f3 \uc0\u9673 
+\f0 	Object\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for timer based animation\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for managing of objects physical motion properties\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for trackball paradigm interaction with 3D object\
+		
+\f3 \uc0\u9673 
+\f0 	PBO\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for PBO asynchronous read pixel operation\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for PBO asynchronous texture updates\
+		
+\f3 \uc0\u9673 
+\f0 	Pixels\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for acquiring a valid pixel format from a set of desired attributes\
+		
+\f3 \uc0\u9673 
+\f0 	Quad\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for instantiating a VBO based quad\
+		
+\f3 \uc0\u9673 
+\f0 	Query\
+			
+\f3 \uc0\u10687 
+\f0 	Utility class for querying the GPU for its hardware attributes\
+		
+\f3 \uc0\u9673 
+\f0 	Shaders\
+			
+\f3 \uc0\u10687 
+\f0 	Compiles, links, and acquires a program object from a fragment and vertex source\
+			
+\f3 \uc0\u10687 
+\f0 	Manages assets such as uniforms and textures associated with a shader\
+			
+\f3 \uc0\u10687 
+\f0 	Executes a shader along with its assets\
+		
+\f3 \uc0\u9673 
+\f0 	Surfaces\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes to build and then instantiate various forms of exotic 3D objects\
+		
+\f3 \uc0\u9673 
+\f0 	Text\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes to convert system fonts to textures for use with OpenGL\
+		
+\f3 \uc0\u9673 
+\f0 	Texture\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes for managing standard 1D, 2D, 3D textures as well as shared and cached textures\
+			
+\f3 \uc0\u10687 
+\f0 	A mediator class for managing various forms of textures including textures bound to a PBO\
+		
+\f3 \uc0\u9673 
+\f0 	View\
+			
+\f3 \uc0\u10687 
+\f0 	Utility classes for taking a snapshot from a view and saving the results as tiff, pdf, bmp, png, pict, gif, jpeg, jp2.\
+	
+\f3 \'81\'9d
+\f0 	Utilities\
+		
+\f3 \uc0\u9673 
+\f0 	View animation class for fade in/out of panels and level indicators\
+		
+\f3 \uc0\u9673 
+\f0 	A utility function for logging Core Foundation style errors\
+		
+\f3 \uc0\u9673 
+\f0 	A utility class for generating a standard path name for saving images\
+		
+\f3 \uc0\u9673 
+\f0 	A utility class that implements a Mach based performance timer\
+
+\f2 \uc0\u9658 
+\f0 	View\
+	
+\f3 \'81\'9d
+\f0 	Utility classes for implementing a customized animating OpenGL view that allows limited interaction with 3D objects.\
+
+\f2 \uc0\u9658 
+\f0 	Controller\
+	
+\f3 \'81\'9d
+\f0 	Controller class to handle preferences UI interaction with property list\
+	
+\f3 \'81\'9d
+\f0 	Controller class to manage UI interaction with filters, shaders, and property list\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Class Hierarchy:
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 {{\NeXTGraphic FV2AP.jpg \width30060 \height27920
+}¬}}

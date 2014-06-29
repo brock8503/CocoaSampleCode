@@ -1,0 +1,118 @@
+
+/* Class = "NSMenuItem"; title = "Tout ramener au premier plan"; ObjectID = "5"; */
+"5.title" = "Tout ramener au premier plan";
+
+/* Class = "NSMenuItem"; title = "Fenêtre"; ObjectID = "19"; */
+"19.title" = "Fenêtre";
+
+/* Class = "NSMenuItem"; title = "Placer dans le Dock"; ObjectID = "23"; */
+"23.title" = "Placer dans le Dock";
+
+/* Class = "NSMenu"; title = "Fenêtre"; ObjectID = "24"; */
+"24.title" = "Fenêtre";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "Mountains"; ObjectID = "56"; */
+"56.title" = "Mountains";
+
+/* Class = "NSMenu"; title = "Mountains"; ObjectID = "57"; */
+"57.title" = "Mountains";
+
+/* Class = "NSMenuItem"; title = "À propos de Mountains"; ObjectID = "58"; */
+"58.title" = "À propos de Mountains";
+
+/* Class = "NSMenuItem"; title = "Fermer"; ObjectID = "73"; */
+"73.title" = "Fermer";
+
+/* Class = "NSMenuItem"; title = "Imprimer…"; ObjectID = "78"; */
+"78.title" = "Imprimer…";
+
+/* Class = "NSMenu"; title = "Fichier"; ObjectID = "81"; */
+"81.title" = "Fichier";
+
+/* Class = "NSMenuItem"; title = "Fichier"; ObjectID = "83"; */
+"83.title" = "Fichier";
+
+/* Class = "NSMenuItem"; title = "Aide"; ObjectID = "103"; */
+"103.title" = "Aide";
+
+/* Class = "NSMenu"; title = "Aide"; ObjectID = "106"; */
+"106.title" = "Aide";
+
+/* Class = "NSMenuItem"; title = "Aide Mountains"; ObjectID = "111"; */
+"111.title" = "Aide Mountains";
+
+/* Class = "NSMenuItem"; title = "Préférences…"; ObjectID = "129"; */
+"129.title" = "Préférences…";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "130"; */
+"130.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "131"; */
+"131.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Masquer Mountains"; ObjectID = "134"; */
+"134.title" = "Masquer Mountains";
+
+/* Class = "NSMenuItem"; title = "Quitter Mountains"; ObjectID = "136"; */
+"136.title" = "Quitter Mountains";
+
+/* Class = "NSMenuItem"; title = "Masquer les autres"; ObjectID = "145"; */
+"145.title" = "Masquer les autres";
+
+/* Class = "NSMenuItem"; title = "Tout afficher"; ObjectID = "150"; */
+"150.title" = "Tout afficher";
+
+/* Class = "NSMenuItem"; title = "Copier"; ObjectID = "197"; */
+"197.title" = "Copier";
+
+/* Class = "NSMenuItem"; title = "Tout sélectionner"; ObjectID = "198"; */
+"198.title" = "Tout sélectionner";
+
+/* Class = "NSMenuItem"; title = "Couper"; ObjectID = "199"; */
+"199.title" = "Couper";
+
+/* Class = "NSMenuItem"; title = "Supprimer"; ObjectID = "202"; */
+"202.title" = "Supprimer";
+
+/* Class = "NSMenuItem"; title = "Coller"; ObjectID = "203"; */
+"203.title" = "Coller";
+
+/* Class = "NSMenu"; title = "Édition"; ObjectID = "205"; */
+"205.title" = "Édition";
+
+/* Class = "NSMenuItem"; title = "Annuler"; ObjectID = "207"; */
+"207.title" = "Annuler";
+
+/* Class = "NSMenuItem"; title = "Rétablir"; ObjectID = "215"; */
+"215.title" = "Rétablir";
+
+/* Class = "NSMenuItem"; title = "Édition"; ObjectID = "217"; */
+"217.title" = "Édition";
+
+/* Class = "NSMenuItem"; title = "Réduire/agrandir"; ObjectID = "239"; */
+"239.title" = "Réduire/agrandir";
+
+/* Class = "NSWindow"; title = "Fenêtre"; ObjectID = "371"; */
+"371.title" = "Fenêtre";
+
+
+/* Class = "NSTableColumn"; headerCell.title = "Nom"; ObjectID = "392"; */
+"392.headerCell.title" = "Nom";
+
+/* Class = "NSTableColumn"; headerCell.title = "Taille"; ObjectID = "393"; */
+"393.headerCell.title" = "Taille";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "394"; */
+"394.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "395"; */
+"395.title" = "Text Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Date montée"; ObjectID = "396"; */
+"396.headerCell.title" = "Date montée";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "397"; */
+"397.title" = "Text Cell";

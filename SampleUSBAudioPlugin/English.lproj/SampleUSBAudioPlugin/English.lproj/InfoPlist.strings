@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "SampleUSBAudioPlugin";
+NSHumanReadableCopyright = "© __MyCompanyName__, 2013";

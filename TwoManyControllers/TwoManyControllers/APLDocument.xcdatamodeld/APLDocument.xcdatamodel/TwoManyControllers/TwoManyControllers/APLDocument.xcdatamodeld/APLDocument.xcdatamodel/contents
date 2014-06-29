@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A397p" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="License" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="String" defaultValueString="LicenseNumber" syncable="YES"/>
+        <relationship name="version" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Version" inverseName="licenses" inverseEntity="Version" syncable="YES"/>
+    </entity>
+    <entity name="Product" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="Name" syncable="YES"/>
+        <relationship name="versions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Version" inverseName="product" inverseEntity="Version" syncable="YES"/>
+    </entity>
+    <entity name="Version" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="String" defaultValueString="VersionNumber" syncable="YES"/>
+        <relationship name="licenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="License" inverseName="version" inverseEntity="License" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="versions" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="License" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Product" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Version" positionX="160" positionY="192" width="128" height="90"/>
+    </elements>
+</model>

@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BBB7EA1179701B5000F8C8D /* libProcessFloatSamples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BECCE151795B12100C95348 /* libProcessFloatSamples.a */; };
+		8BECCE061795AF5700C95348 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BECCE041795AF5700C95348 /* InfoPlist.strings */; };
+		8BECCE0F1795AF7300C95348 /* SampleUSBAudioPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BECCE0A1795AF7300C95348 /* SampleUSBAudioPlugin.cpp */; };
+		8BECCE3C1795B15C00C95348 /* ProcessFloatSamples.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BECCE081795AF7300C95348 /* ProcessFloatSamples.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BBB7E9F179701AF000F8C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BECCDDF1795ACCC00C95348 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BECCE141795B12100C95348;
+			remoteInfo = libProcessFloatSamples;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8BECCDE91795ACCC00C95348 /* SampleUSBAudioPlugin.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUSBAudioPlugin.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BECCDED1795ACCC00C95348 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		8BECCDFD1795AF2300C95348 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		8BECCE051795AF5700C95348 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
+		8BECCE071795AF7300C95348 /* AppleUSBAudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleUSBAudioPlugin.h; sourceTree = SOURCE_ROOT; };
+		8BECCE081795AF7300C95348 /* ProcessFloatSamples.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ProcessFloatSamples.c; sourceTree = SOURCE_ROOT; };
+		8BECCE091795AF7300C95348 /* ProcessFloatSamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessFloatSamples.h; sourceTree = SOURCE_ROOT; };
+		8BECCE0A1795AF7300C95348 /* SampleUSBAudioPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleUSBAudioPlugin.cpp; sourceTree = SOURCE_ROOT; };
+		8BECCE0B1795AF7300C95348 /* SampleUSBAudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleUSBAudioPlugin.h; sourceTree = SOURCE_ROOT; };
+		8BECCE151795B12100C95348 /* libProcessFloatSamples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProcessFloatSamples.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BECCDE41795ACCC00C95348 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BBB7EA1179701B5000F8C8D /* libProcessFloatSamples.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BECCE121795B12100C95348 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BECCDDE1795ACCC00C95348 = {
+			isa = PBXGroup;
+			children = (
+				8BECCDEE1795ACCC00C95348 /* SampleUSBAudioPlugin */,
+				8BECCDEB1795ACCC00C95348 /* Frameworks */,
+				8BECCDEA1795ACCC00C95348 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BECCDEA1795ACCC00C95348 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BECCDE91795ACCC00C95348 /* SampleUSBAudioPlugin.kext */,
+				8BECCE151795B12100C95348 /* libProcessFloatSamples.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BECCDEB1795ACCC00C95348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BECCDEC1795ACCC00C95348 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BECCDEC1795ACCC00C95348 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BECCDED1795ACCC00C95348 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8BECCDEE1795ACCC00C95348 /* SampleUSBAudioPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				8BECCDEF1795ACCC00C95348 /* Supporting Files */,
+			);
+			name = SampleUSBAudioPlugin;
+			path = SampleUSBAudioPlugin_new;
+			sourceTree = "<group>";
+		};
+		8BECCDEF1795ACCC00C95348 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BECCE071795AF7300C95348 /* AppleUSBAudioPlugin.h */,
+				8BECCE081795AF7300C95348 /* ProcessFloatSamples.c */,
+				8BECCE091795AF7300C95348 /* ProcessFloatSamples.h */,
+				8BECCE0A1795AF7300C95348 /* SampleUSBAudioPlugin.cpp */,
+				8BECCE0B1795AF7300C95348 /* SampleUSBAudioPlugin.h */,
+				8BECCDFD1795AF2300C95348 /* Info.plist */,
+				8BECCE031795AF5700C95348 /* English.lproj */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BECCE031795AF5700C95348 /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8BECCE041795AF5700C95348 /* InfoPlist.strings */,
+			);
+			path = English.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8BECCDE51795ACCC00C95348 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BECCE131795B12100C95348 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8BECCDE81795ACCC00C95348 /* SampleUSBAudioPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BECCDFA1795ACCC00C95348 /* Build configuration list for PBXNativeTarget "SampleUSBAudioPlugin" */;
+			buildPhases = (
+				8BECCDE31795ACCC00C95348 /* Sources */,
+				8BECCDE41795ACCC00C95348 /* Frameworks */,
+				8BECCDE51795ACCC00C95348 /* Headers */,
+				8BECCDE61795ACCC00C95348 /* Resources */,
+				8BECCDE71795ACCC00C95348 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BBB7EA0179701AF000F8C8D /* PBXTargetDependency */,
+			);
+			name = SampleUSBAudioPlugin;
+			productName = SampleUSBAudioPlugin_new;
+			productReference = 8BECCDE91795ACCC00C95348 /* SampleUSBAudioPlugin.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		8BECCE141795B12100C95348 /* libProcessFloatSamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BECCE3A1795B12200C95348 /* Build configuration list for PBXNativeTarget "libProcessFloatSamples" */;
+			buildPhases = (
+				8BECCE111795B12100C95348 /* Sources */,
+				8BECCE121795B12100C95348 /* Frameworks */,
+				8BECCE131795B12100C95348 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libProcessFloatSamples;
+			productName = libProcessFloatSamples;
+			productReference = 8BECCE151795B12100C95348 /* libProcessFloatSamples.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BECCDDF1795ACCC00C95348 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = MySoftwareCompany;
+			};
+			buildConfigurationList = 8BECCDE21795ACCC00C95348 /* Build configuration list for PBXProject "SampleUSBAudioPlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 8BECCDDE1795ACCC00C95348;
+			productRefGroup = 8BECCDEA1795ACCC00C95348 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BECCDE81795ACCC00C95348 /* SampleUSBAudioPlugin */,
+				8BECCE141795B12100C95348 /* libProcessFloatSamples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BECCDE61795ACCC00C95348 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BECCE061795AF5700C95348 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8BECCDE71795ACCC00C95348 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BECCDE31795ACCC00C95348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BECCE0F1795AF7300C95348 /* SampleUSBAudioPlugin.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BECCE111795B12100C95348 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BECCE3C1795B15C00C95348 /* ProcessFloatSamples.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BBB7EA0179701AF000F8C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BECCE141795B12100C95348 /* libProcessFloatSamples */;
+			targetProxy = 8BBB7E9F179701AF000F8C8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BECCE041795AF5700C95348 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BECCE051795AF5700C95348 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BECCDF81795ACCC00C95348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8BECCDF91795ACCC00C95348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8BECCDFB1795ACCC00C95348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				COMBINE_HIDPI_IMAGES = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NeXT,
+					APPLE,
+					KERNEL,
+					"DEBUG=1",
+				);
+				GCC_VERSION = "";
+				INFOPLIST_FILE = Info.plist;
+				MODULE_NAME = MySoftwareCompany.SampleUSBAudioPlugin;
+				MODULE_VERSION = 1.0.0d1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = SampleUSBAudioPlugin;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		8BECCDFC1795ACCC00C95348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				COMBINE_HIDPI_IMAGES = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NeXT,
+					APPLE,
+					KERNEL,
+				);
+				GCC_VERSION = "";
+				INFOPLIST_FILE = Info.plist;
+				MODULE_NAME = MySoftwareCompany.SampleUSBAudioPlugin;
+				MODULE_VERSION = 1.0.0d1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = SampleUSBAudioPlugin;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		8BECCE361795B12200C95348 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					KERNEL,
+					NeXT,
+					APPLE,
+				);
+				HEADER_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Headers";
+				LD_DYLIB_INSTALL_NAME = "";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-nostdinc",
+					"-finline",
+					"-fno-keep-inline-functions",
+					"-force_cpusubtype_ALL",
+					"-static",
+					"$(OTHER_CFLAGS_$(arch))",
+					"-Wall",
+					"-mkernel",
+				);
+				OTHER_LDFLAGS = "-static";
+				PRODUCT_NAME = ProcessFloatSamples;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		8BECCE371795B12200C95348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					APPLE,
+					NeXT,
+					KERNEL,
+				);
+				HEADER_SEARCH_PATHS = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Kernel.framework/Headers";
+				LD_DYLIB_INSTALL_NAME = "";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-nostdinc",
+					"-finline",
+					"-fno-keep-inline-functions",
+					"-force_cpusubtype_ALL",
+					"-static",
+					"$(OTHER_CFLAGS_$(arch))",
+					"-Wall",
+					"-mkernel",
+				);
+				OTHER_LDFLAGS = "-static";
+				PRODUCT_NAME = ProcessFloatSamples;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BECCDE21795ACCC00C95348 /* Build configuration list for PBXProject "SampleUSBAudioPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BECCDF81795ACCC00C95348 /* Debug */,
+				8BECCDF91795ACCC00C95348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BECCDFA1795ACCC00C95348 /* Build configuration list for PBXNativeTarget "SampleUSBAudioPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BECCDFB1795ACCC00C95348 /* Debug */,
+				8BECCDFC1795ACCC00C95348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BECCE3A1795B12200C95348 /* Build configuration list for PBXNativeTarget "libProcessFloatSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BECCE361795B12200C95348 /* Debug */,
+				8BECCE371795B12200C95348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BECCDDF1795ACCC00C95348 /* Project object */;
+}
